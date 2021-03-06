@@ -1,0 +1,15 @@
+name: BUYILD.SH
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '* * * * *'
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: source BUYILD.SH
